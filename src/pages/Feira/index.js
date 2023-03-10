@@ -8,14 +8,14 @@ import Produto from 'components/Produto';
 import NavBar from './NavBar';
 
 
-function Feira() {
+function Feira({nome, saldo}) {
   return (
     <Container>
       <NavBar />
       <Header>
         <div>
-          <h2> Olá!</h2>
-          <h3> Saldo: R$</h3>
+          <h2> Olá! {nome}</h2>
+          <h3> Saldo: R$ {saldo}</h3>
         </div>
         <p>Encontre os melhores produtos orgânicos!</p>
       </Header>
