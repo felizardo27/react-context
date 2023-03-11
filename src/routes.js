@@ -1,3 +1,4 @@
+import { CarrinhoProvider } from "common/context/Carrinho"
 import { UsuarioProvider } from "common/context/Usuario"
 import Carrinho from "pages/Carrinho"
 import Feira from "pages/Feira"
@@ -15,9 +16,11 @@ const Router = () => {
           <Route exact path="/">
             <Login />
           </Route>
-          <Route exact path="/feira">
-            <Feira />
-          </Route>
+          <CarrinhoProvider>
+            <Route exact path="/feira">
+              <Feira />
+            </Route>
+          </CarrinhoProvider>
         </UsuarioProvider>
         <Route exact path="/carrinho">
           <Carrinho />
