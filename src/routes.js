@@ -20,11 +20,11 @@ const Router = () => {
             <Route exact path="/feira">
               <Feira />
             </Route>
+            <Route exact path="/carrinho">
+              <Carrinho />
+            </Route>
           </CarrinhoProvider>
         </UsuarioProvider>
-        <Route exact path="/carrinho">
-          <Carrinho />
-        </Route>
       </Switch>
     </BrowserRouter>
   )
