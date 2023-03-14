@@ -1,4 +1,5 @@
 import { CarrinhoProvider } from "common/context/Carrinho"
+import { PagamentoProvider } from "common/context/Pagamento"
 import { UsuarioProvider } from "common/context/Usuario"
 import Carrinho from "pages/Carrinho"
 import Feira from "pages/Feira"
@@ -20,9 +21,11 @@ const Router = () => {
             <Route exact path="/feira">
               <Feira />
             </Route>
-            <Route exact path="/carrinho">
-              <Carrinho />
-            </Route>
+            <PagamentoProvider>
+              <Route exact path="/carrinho">
+                <Carrinho />
+              </Route>
+            </PagamentoProvider>
           </CarrinhoProvider>
         </UsuarioProvider>
       </Switch>
