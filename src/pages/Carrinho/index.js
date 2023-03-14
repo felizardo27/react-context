@@ -9,11 +9,11 @@ import { useHistory } from 'react-router-dom';
 function Carrinho() {
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const { carrinho } = useCarrinhoContext()
-  const history = useHistory().push
+  const history = useHistory()
   return (
     <Container>
       <Voltar 
-        onClick={() => history('/feira')}
+        onClick={() => history.goBack()}
       />
       <h2>
         Carrinho
